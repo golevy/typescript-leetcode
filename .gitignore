@@ -1,0 +1,4 @@
+# miscellaneous
+.vscode/
+.DS_Store
+*.pem
