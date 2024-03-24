@@ -22,7 +22,13 @@ function reverseStringUsingTempVariable(s) {
         right--;
     }
 }
-reverseStringUsingDestructuring(strArray1);
-reverseStringUsingTempVariable(strArray2);
-console.log(strArray1);
-console.log(strArray2);
+let strArrayForDestructuring = [...strArray1];
+console.time("reverseStringUsingDestructuring");
+reverseStringUsingDestructuring(strArrayForDestructuring);
+console.timeEnd("reverseStringUsingDestructuring");
+let strArrayForTempVariable = [...strArray1];
+console.time("reverseStringUsingTempVariable");
+reverseStringUsingTempVariable(strArrayForTempVariable);
+console.timeEnd("reverseStringUsingTempVariable");
+console.log(strArrayForDestructuring);
+console.log(strArrayForTempVariable);
